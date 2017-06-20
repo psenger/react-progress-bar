@@ -106,4 +106,4 @@ Im pretty happy with these results. If I could get time to do a few more things:
 
 # Known Issues
 
-1. When the API comes up or is in the middle of of sending data, the page looks odd. Parts of it are missing.
+1. When the API comes up or is in the middle of sending data, the page looks odd. Parts of it are missing. [Issue #1](https://github.com/psenger/react-progress-bar/issues/1)
