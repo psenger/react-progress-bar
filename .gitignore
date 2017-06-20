@@ -12,6 +12,7 @@
 .eslintcache
 .grunt
 .idea/
+.idea
 .lock-wscript
 .node_repl_history
 .npm
