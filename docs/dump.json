@@ -1,0 +1,2313 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "name": "src/actionCreators/actionTypes/index.js",
+    "content": "/**\n * Actions are constants use by the stores, actions, and sagas to identify event types.\n *\n * @type {{BUTTON_BARS: {FETCH: string, SAVE: string, UPDATE: string}}}\n */\nconst ACTIONS = {\n  BUTTON_BARS: {\n    FETCH: 'buttonBars.fetch',\n    SAVE: 'buttonBars.save',\n    UPDATE: 'buttonBars.update'\n  }\n  // @TODO: [PAS] - it wound be very nice to include messages from the server, this would include errors and requests in flight.\n  // MESSAGE: {\n  //   SAVE: 'message.save',\n  //   IS_ERROR: 'message.is_error',\n  //   IN_FLIGHT: 'message.in_flight'\n  // }\n};\n\nexport { ACTIONS as default };\n",
+    "static": true,
+    "longname": "src/actionCreators/actionTypes/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "variable",
+    "name": "ACTIONS",
+    "memberof": "src/actionCreators/actionTypes/index.js",
+    "static": true,
+    "longname": "src/actionCreators/actionTypes/index.js~ACTIONS",
+    "access": null,
+    "export": false,
+    "importPath": "react-progress-bar/src/actionCreators/actionTypes/index.js",
+    "importStyle": null,
+    "description": "Actions are constants use by the stores, actions, and sagas to identify event types.",
+    "lineNumber": 6,
+    "type": {
+      "nullable": null,
+      "types": [
+        "{BUTTON_BARS: {FETCH: string, SAVE: string, UPDATE: string}}"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 2,
+    "kind": "file",
+    "name": "src/actionCreators/buttonBarsActions.js",
+    "content": "import ACTIONS from './actionTypes/index';\n\n/**\n * Initiate the workflow by making request for the button bars data.\n * @function\n * @return {action}\n */\nexport const fetchData = () => ({\n  type: ACTIONS.BUTTON_BARS.FETCH\n});\n\n/**\n * Save the data into the store. This is a destructive operation.\n * @function\n * @param {{ buttons: [number], bars: [number] }} data - the data to store.\n * @return {action}\n */\nexport const saveData = data => ({\n  type: ACTIONS.BUTTON_BARS.SAVE,\n  value: data\n});\n\n/**\n * Update the given Bar by index, adding the given percentage to the value. This could be a negative number, decrementing the value.\n * @function\n * @param {{index:number,percentage:number}} data - the data to store.\n * @return {action}\n */\nexport const updateBar = (data) => ({\n  type: ACTIONS.BUTTON_BARS.UPDATE,\n  value: data\n});\n",
+    "static": true,
+    "longname": "src/actionCreators/buttonBarsActions.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 3,
+    "kind": "function",
+    "name": "fetchData",
+    "memberof": "src/actionCreators/buttonBarsActions.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/actionCreators/buttonBarsActions.js~fetchData",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/actionCreators/buttonBarsActions.js",
+    "importStyle": "{fetchData}",
+    "description": "Initiate the workflow by making request for the button bars data.",
+    "lineNumber": 8,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "action"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "function",
+    "name": "saveData",
+    "memberof": "src/actionCreators/buttonBarsActions.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/actionCreators/buttonBarsActions.js~saveData",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/actionCreators/buttonBarsActions.js",
+    "importStyle": "{saveData}",
+    "description": "Save the data into the store. This is a destructive operation.",
+    "lineNumber": 18,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "{ buttons: [number], bars: [number] }"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the data to store."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "action"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "function",
+    "name": "updateBar",
+    "memberof": "src/actionCreators/buttonBarsActions.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/actionCreators/buttonBarsActions.js~updateBar",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/actionCreators/buttonBarsActions.js",
+    "importStyle": "{updateBar}",
+    "description": "Update the given Bar by index, adding the given percentage to the value. This could be a negative number, decrementing the value.",
+    "lineNumber": 29,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "{index:number,percentage:number}"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": "the data to store."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "action"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "file",
+    "name": "src/components/button/Button.js",
+    "content": "import PropTypes from 'prop-types';\nimport React, { Component } from 'react';\n\n/**\n * A basic Button Class used for creating html buttons.\n *\n * @class\n */\nclass Button extends Component {\n\n  /**\n   * Constructor\n   * @constructor\n   * @param {number|string} props.value - the value to pass the <code>onClickHandler</code>\n   * @param {function} props.onClickHandler - On click handler\n   */\n  constructor(props) {\n    super(props);\n    this.displayName = 'components/Button';\n    this.onClickHandlerProxy = this.onClickHandlerProxy.bind(this);\n  }\n\n  /**\n   * On click handler proxy, which forwards on the prop's value to the <code>onClickHandler</code> attached to the <code>props</code.\n   */\n  onClickHandlerProxy() {\n    this.props.onClickHandler(this.props.value);\n  }\n\n  /**\n   * Standard React Render method\n   * @returns {XML}\n   */\n  render() {\n    let { value } = this.props;\n\n    return (\n      <button type='button' onClick={this.onClickHandlerProxy} tabIndex={0} data-component-name={this.displayName}>{value}</button>\n    );\n  }\n}\n\nButton.propTypes = {\n  value: PropTypes.oneOfType([\n    PropTypes.number,\n    PropTypes.string\n  ]).isRequired,\n  onClickHandler: PropTypes.func.isRequired\n};\n\nexport default Button;\n",
+    "static": true,
+    "longname": "src/components/button/Button.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 7,
+    "kind": "class",
+    "name": "Button",
+    "memberof": "src/components/button/Button.js",
+    "static": true,
+    "longname": "src/components/button/Button.js~Button",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/components/button/Button.js",
+    "importStyle": "Button",
+    "description": "A basic Button Class used for creating html buttons.",
+    "lineNumber": 9,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 8,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/button/Button.js~Button",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/button/Button.js~Button#constructor",
+    "access": null,
+    "description": "Constructor",
+    "lineNumber": 17,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number",
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props.value",
+        "description": "the value to pass the <code>onClickHandler</code>"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props.onClickHandler",
+        "description": "On click handler"
+      }
+    ]
+  },
+  {
+    "__docId__": 9,
+    "kind": "member",
+    "name": "displayName",
+    "memberof": "src/components/button/Button.js~Button",
+    "static": false,
+    "longname": "src/components/button/Button.js~Button#displayName",
+    "access": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "member",
+    "name": "onClickHandlerProxy",
+    "memberof": "src/components/button/Button.js~Button",
+    "static": false,
+    "longname": "src/components/button/Button.js~Button#onClickHandlerProxy",
+    "access": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "method",
+    "name": "onClickHandlerProxy",
+    "memberof": "src/components/button/Button.js~Button",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/button/Button.js~Button#onClickHandlerProxy",
+    "access": null,
+    "description": "On click handler proxy, which forwards on the prop's value to the <code>onClickHandler</code> attached to the <code>props</code.",
+    "lineNumber": 26,
+    "params": []
+  },
+  {
+    "__docId__": 12,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/button/Button.js~Button",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/button/Button.js~Button#render",
+    "access": null,
+    "description": "Standard React Render method",
+    "lineNumber": 34,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{XML}"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "XML"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "file",
+    "name": "src/components/option/Option.js",
+    "content": "import PropTypes from 'prop-types';\nimport React from 'react';\n\n/**\n * A basic Option class used by the <code>Select</code> creating html options.\n *\n * @function\n * @param {number|string} value - the value in the option\n * @param {number|string} text - the text that appears in the option tag.\n * @returns {XML}\n */\nconst Option = ({ value, text }) => {\n  return (\n    <option value={value} data-component-name='components/Option'>{text}</option>\n  );\n};\n\nOption.propTypes = {\n  value: PropTypes.oneOfType([\n    PropTypes.number,\n    PropTypes.string\n  ]).isRequired,\n  text: PropTypes.oneOfType([\n    PropTypes.number,\n    PropTypes.string\n  ]).isRequired\n};\n\nexport default Option;\n",
+    "static": true,
+    "longname": "src/components/option/Option.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 14,
+    "kind": "function",
+    "name": "Option",
+    "memberof": "src/components/option/Option.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/option/Option.js~Option",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/components/option/Option.js",
+    "importStyle": "Option",
+    "description": "A basic Option class used by the <code>Select</code> creating html options.",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{XML}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number",
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "the value in the option"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number",
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "text",
+        "description": "the text that appears in the option tag."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "XML"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 15,
+    "kind": "file",
+    "name": "src/components/progressBar/ProgressBar.js",
+    "content": "import className from 'classnames';\nimport PropTypes from 'prop-types';\nimport React from 'react';\n\nimport './ProgressBar.css';\n\n/**\n * Calculates the stop gap given the percentage.\n * If the percentage goes outside of the given range, it stops it.\n * @function\n * @private\n * @param {number} percentage - the percentage.\n * @returns {number}\n */\nconst stopGap = (percentage) => {\n  if (percentage >= 100) return 100;\n  if (percentage <= 0) return 0;\n  return percentage;\n};\n\n/**\n * A test if the value is valid between a given range.\n * @function\n * @private\n * @param {number} percentage - the percentage.\n * @returns {boolean}\n */\nconst isValid = (percentage = 0) => {\n  return (percentage >= 0 && percentage <= 100);\n};\n\n/**\n * A test if the value is invalid, outside a given range.\n * @function\n * @private\n * @param {number} percentage - the percentage.\n * @returns {boolean}\n */\nconst isInValid = (percentage) => !isValid(percentage);\n\n/**\n * ProgressBar constructs the html needed to present a Progress bar.\n *\n * @function\n * @param {number} [percentage=0] - the percentage.\n * @returns {XML}\n */\nconst ProgressBar = ({ percentage }) => {\n\n  let slideClassNames = className('progressbar--slide', {\n    'progressbar--slide--valid': isValid(percentage),\n    'progressbar--slide--invalid': isInValid(percentage)\n  });\n\n  return (\n    <div className='progressbar--border' role='progressbar' aria-valuenow={percentage} aria-valuemin='0' aria-valuemax='100' aria-invalid={isInValid(percentage)} tabIndex={0} data-component-name='components/ProgressBar' >\n      <div className={slideClassNames} style={{ width: stopGap(percentage) + '%' }} />\n      <span className=\"progressbar--label\">{percentage}&#37;</span>\n    </div>\n  );\n};\n\n/**\n * ProgressBar\n * @type {{percentage: number}}\n */\nProgressBar.propTypes = {\n  percentage: PropTypes.number\n};\n\n/**\n * ProgressBar Default values\n * @type {{percentage: 0}}\n */\nProgressBar.defaultProps = {\n  percentage: 0\n};\n\nexport default ProgressBar;\n",
+    "static": true,
+    "longname": "src/components/progressBar/ProgressBar.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 16,
+    "kind": "function",
+    "name": "stopGap",
+    "memberof": "src/components/progressBar/ProgressBar.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/progressBar/ProgressBar.js~stopGap",
+    "access": "private",
+    "export": false,
+    "importPath": "react-progress-bar/src/components/progressBar/ProgressBar.js",
+    "importStyle": null,
+    "description": "Calculates the stop gap given the percentage.\nIf the percentage goes outside of the given range, it stops it.",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{number}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "percentage",
+        "description": "the percentage."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "number"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 17,
+    "kind": "function",
+    "name": "isValid",
+    "memberof": "src/components/progressBar/ProgressBar.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/progressBar/ProgressBar.js~isValid",
+    "access": "private",
+    "export": false,
+    "importPath": "react-progress-bar/src/components/progressBar/ProgressBar.js",
+    "importStyle": null,
+    "description": "A test if the value is valid between a given range.",
+    "lineNumber": 28,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "percentage",
+        "description": "the percentage."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 18,
+    "kind": "function",
+    "name": "isInValid",
+    "memberof": "src/components/progressBar/ProgressBar.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/progressBar/ProgressBar.js~isInValid",
+    "access": "private",
+    "export": false,
+    "importPath": "react-progress-bar/src/components/progressBar/ProgressBar.js",
+    "importStyle": null,
+    "description": "A test if the value is invalid, outside a given range.",
+    "lineNumber": 39,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "percentage",
+        "description": "the percentage."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 19,
+    "kind": "function",
+    "name": "ProgressBar",
+    "memberof": "src/components/progressBar/ProgressBar.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/progressBar/ProgressBar.js~ProgressBar",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/components/progressBar/ProgressBar.js",
+    "importStyle": "ProgressBar",
+    "description": "ProgressBar constructs the html needed to present a Progress bar.",
+    "lineNumber": 48,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      },
+      {
+        "tagName": "@returns",
+        "tagValue": "{XML}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "percentage",
+        "description": "the percentage."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "XML"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 20,
+    "kind": "file",
+    "name": "src/components/section/Section.js",
+    "content": "import PropTypes from 'prop-types';\nimport React from 'react';\n\n/**\n * A basic Section class used to creating html <code>section</code> and <code>h#</code> tags for proper accessibility navigation.\n *\n * @param {string} title - the title of the HTML section, used by screen readers and SEO outline tools to categorise sections of content.\n * @param {number} level - the heading level\n * @param {node|[node]|string|null} children - these are JSX children to render\n * @returns {XML}\n */\nconst Section = ({ title, level, children }) => {\n\n  return (\n    <section data-component-name='components/Section'>\n      {level === 1 ? <h1>{title}</h1> : null}\n      {level === 2 ? <h2>{title}</h2> : null}\n      {children}\n    </section>\n  );\n};\n\nSection.propTypes = {\n  children: PropTypes.oneOfType([\n    PropTypes.arrayOf(PropTypes.node),\n    PropTypes.node,\n    PropTypes.string\n  ]),\n  title: PropTypes.string.isRequired,\n  level: PropTypes.number.isRequired\n};\n\n// Section.defaultProps = {\n//   title: 'Not Set',\n//   level: 1\n// };\n\nexport default Section;\n",
+    "static": true,
+    "longname": "src/components/section/Section.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 21,
+    "kind": "function",
+    "name": "Section",
+    "memberof": "src/components/section/Section.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/section/Section.js~Section",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/components/section/Section.js",
+    "importStyle": "Section",
+    "description": "A basic Section class used to creating html <code>section</code> and <code>h#</code> tags for proper accessibility navigation.",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{XML}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "title",
+        "description": "the title of the HTML section, used by screen readers and SEO outline tools to categorise sections of content."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "level",
+        "description": "the heading level"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "node",
+          "[node]",
+          "string",
+          "null"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "children",
+        "description": "these are JSX children to render"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "XML"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 22,
+    "kind": "file",
+    "name": "src/components/select/Select.js",
+    "content": "import PropTypes from 'prop-types';\nimport React, { Component } from 'react';\n\n/**\n * @typedef {Object} event - a dom event\n * @property {Object} target - a dom target.\n * @property {*} target.value - the value\n */\n\n/**\n * A basic Select Class used for creating html select tags.\n *\n * @class\n */\nclass Select extends Component {\n\n  /**\n   * Constructor\n   * @param {Object} props - basic Properties object\n   * @param {number|string} props.value - the value to pass the <code>onClickHandler</code>\n   * @param {onChangeHandler} props.onChangeHandler - On click handler which is passed the selected value.\n   * @constructor\n   */\n  constructor(props) {\n    super(props);\n    this.displayName = 'components/Select';\n    this.onChangeHandlerProxy = this.onChangeHandlerProxy.bind(this);\n  }\n\n  /**\n   * This proxy method, fires the call back defined in the props <code>onChangeHandler</code> and sends it the selected value.\n   * @param {event} event\n   */\n  onChangeHandlerProxy(event) {\n    this.props.onChangeHandler(event.target.value);\n  }\n\n  render() {\n    let { name, value, children } = this.props;\n\n    return (\n      <select name={name} value={value} onChange={this.onChangeHandlerProxy} data-component-name={this.displayName} tabIndex={0}>{children}</select>\n    );\n  }\n}\n\nSelect.propTypes = {\n  name: PropTypes.string.isRequired,\n  children: PropTypes.node, // PropTypes.arrayOf(),\n  value: PropTypes.oneOfType([\n    PropTypes.number,\n    PropTypes.string\n  ]).isRequired,\n  onChangeHandler: PropTypes.func.isRequired\n};\n\nexport default Select;\n",
+    "static": true,
+    "longname": "src/components/select/Select.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 23,
+    "kind": "typedef",
+    "name": "event",
+    "memberof": "src/components/select/Select.js",
+    "static": true,
+    "longname": "src/components/select/Select.js~event",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target",
+        "description": "a dom target."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target.value",
+        "description": "the value"
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "event"
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "class",
+    "name": "Select",
+    "memberof": "src/components/select/Select.js",
+    "static": true,
+    "longname": "src/components/select/Select.js~Select",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/components/select/Select.js",
+    "importStyle": "Select",
+    "description": "A basic Select Class used for creating html select tags.",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 25,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/select/Select.js~Select",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/select/Select.js~Select#constructor",
+    "access": null,
+    "description": "Constructor",
+    "lineNumber": 24,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props",
+        "description": "basic Properties object"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number",
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props.value",
+        "description": "the value to pass the <code>onClickHandler</code>"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "onChangeHandler"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "props.onChangeHandler",
+        "description": "On click handler which is passed the selected value."
+      }
+    ]
+  },
+  {
+    "__docId__": 26,
+    "kind": "member",
+    "name": "displayName",
+    "memberof": "src/components/select/Select.js~Select",
+    "static": false,
+    "longname": "src/components/select/Select.js~Select#displayName",
+    "access": null,
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "member",
+    "name": "onChangeHandlerProxy",
+    "memberof": "src/components/select/Select.js~Select",
+    "static": false,
+    "longname": "src/components/select/Select.js~Select#onChangeHandlerProxy",
+    "access": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 28,
+    "kind": "method",
+    "name": "onChangeHandlerProxy",
+    "memberof": "src/components/select/Select.js~Select",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/select/Select.js~Select#onChangeHandlerProxy",
+    "access": null,
+    "description": "This proxy method, fires the call back defined in the props <code>onChangeHandler</code> and sends it the selected value.",
+    "lineNumber": 34,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "event"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "event",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 29,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/select/Select.js~Select",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/select/Select.js~Select#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "file",
+    "name": "src/containers/App.js",
+    "content": "import PropTypes from 'prop-types';\nimport React, { Component } from 'react';\nimport { connect } from 'react-redux';\nimport { bindActionCreators } from 'redux';\nimport * as ButtonBarsActions from '../actionCreators/buttonBarsActions';\nimport Button from '../components/button/Button';\nimport Option from '../components/option/Option';\nimport ProgressBar from '../components/progressBar/ProgressBar';\nimport Section from '../components/section/Section';\nimport Select from '../components/select/Select';\n\n/**\n * App Class, a container, wires all the components.\n *\n * Note: by using connect on the default export, I can pry open the class and wire it up by hand\n *\n * @class\n */\nexport class App extends Component {\n\n  constructor(props) {\n    super(props);\n    this.displayName = 'containers/App';\n    this.onChangeHandler = this.onChangeHandler.bind(this);\n    this.onClickHandler = this.onClickHandler.bind(this);\n    this.state = {\n      selected: {\n        index: 0\n      }\n    };\n  }\n\n  componentWillMount() {\n    this.props.buttonBarsActionDispatcher.fetchData();\n  }\n\n  onChangeHandler(data) {\n    this.setState({ selected: { index: data } });\n  }\n\n  onClickHandler(percentage) {\n    this.props.buttonBarsActionDispatcher.updateBar({ index: this.state.selected.index, percentage });\n  }\n\n  render() {\n    let { buttons, bars } = this.props;\n\n    return (\n      <div data-component-name={this.displayName}>\n        <Section title=\"Progress Bars Demo\" level={1}>\n          {bars.map((percentage, i) => (<ProgressBar key={i} percentage={percentage} />))}\n          <Select onChangeHandler={this.onChangeHandler} name='selected-progressbar'>\n            {bars.map((percentage, i) => (<Option key={i} value={i} text={'#progress ' + (i+1)} />))}\n          </Select>\n          {buttons.map((percentage, i) => (<Button key={i} value={percentage} onClickHandler={this.onClickHandler} />))}\n        </Section>\n      </div>\n    );\n  }\n}\n\nApp.defaultProps = {\n  buttons: [],\n  bars: []\n};\n\nApp.propTypes = {\n  buttons: PropTypes.array,\n  bars: PropTypes.array,\n  buttonBarsActionDispatcher: PropTypes.func.isRequired\n};\n\nlet mapStateToProps = (state) => {\n  return {\n    buttons: state.buttonBarsReducer.get('buttons').toJS(),\n    bars: state.buttonBarsReducer.get('bars').toJS()\n  };\n};\n\nlet mapDispatchToProps = (dispatch) => {\n  return {\n    buttonBarsActionDispatcher: bindActionCreators(ButtonBarsActions, dispatch)\n  };\n};\n\n// Note: by using connect on the default export, I can pry open the class and wire it up by hand\nexport default connect(mapStateToProps, mapDispatchToProps /**, mergeProps **/)(App);\n\n",
+    "static": true,
+    "longname": "src/containers/App.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 31,
+    "kind": "class",
+    "name": "App",
+    "memberof": "src/containers/App.js",
+    "static": true,
+    "longname": "src/containers/App.js~App",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/containers/App.js",
+    "importStyle": "{App}",
+    "description": "App Class, a container, wires all the components.\n\nNote: by using connect on the default export, I can pry open the class and wire it up by hand",
+    "lineNumber": 19,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 32,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/containers/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/App.js~App#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 33,
+    "kind": "member",
+    "name": "displayName",
+    "memberof": "src/containers/App.js~App",
+    "static": false,
+    "longname": "src/containers/App.js~App#displayName",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 34,
+    "kind": "member",
+    "name": "onChangeHandler",
+    "memberof": "src/containers/App.js~App",
+    "static": false,
+    "longname": "src/containers/App.js~App#onChangeHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "member",
+    "name": "onClickHandler",
+    "memberof": "src/containers/App.js~App",
+    "static": false,
+    "longname": "src/containers/App.js~App#onClickHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 36,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/containers/App.js~App",
+    "static": false,
+    "longname": "src/containers/App.js~App#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"selected\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 37,
+    "kind": "method",
+    "name": "componentWillMount",
+    "memberof": "src/containers/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/App.js~App#componentWillMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 38,
+    "kind": "method",
+    "name": "onChangeHandler",
+    "memberof": "src/containers/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/App.js~App#onChangeHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 39,
+    "kind": "method",
+    "name": "onClickHandler",
+    "memberof": "src/containers/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/App.js~App#onClickHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "percentage",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 40,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/containers/App.js~App",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/containers/App.js~App#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 41,
+    "kind": "function",
+    "name": "mapStateToProps",
+    "memberof": "src/containers/App.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/containers/App.js~mapStateToProps",
+    "access": null,
+    "export": false,
+    "importPath": "react-progress-bar/src/containers/App.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 73,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "state",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"buttons\": *, \"bars\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 42,
+    "kind": "function",
+    "name": "mapDispatchToProps",
+    "memberof": "src/containers/App.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/containers/App.js~mapDispatchToProps",
+    "access": null,
+    "export": false,
+    "importPath": "react-progress-bar/src/containers/App.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 80,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "dispatch",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "{\"buttonBarsActionDispatcher\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 43,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import React from 'react';\nimport ReactDOM from 'react-dom';\nimport { Provider } from 'react-redux';\nimport App from './containers/App';\nimport store from './stores/index';\n\nReactDOM.render(\n  <main>\n    <Provider store={store}>\n      <App />\n    </Provider>\n  </main>,\n  document.getElementById('root'));\n",
+    "static": true,
+    "longname": "src/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 44,
+    "kind": "file",
+    "name": "src/reducers/buttonBars/buttonBarsReducer.js",
+    "content": "import { fromJS, List } from 'immutable';\nimport ACTIONS from '../../actionCreators/actionTypes/index';\n\nlet initialState = fromJS({ buttons: List([]), bars: List([]) });\n\n/**\n * @typedef {Object} action - an Event.\n * @property {string} action.type - the action type.\n * @property {*} target.value - the value.\n */\n\n/**\n * button and bars Reducer\n *\n * @param {*} state - the state of this reducer\n * @param {action} action - the action.\n * @returns {any}\n */\nexport default function buttonBarsReducer(state = initialState, action) {\n  let value = action.value;\n\n  switch (action.type) {\n\n    case ACTIONS.BUTTON_BARS.SAVE:\n      return state.merge(value);\n\n    case ACTIONS.BUTTON_BARS.UPDATE:\n      if (value) {\n        let { index, percentage } = value;\n\n        if (index !== undefined && index >= 0 && percentage !== undefined) {\n          let base = (state.get('bars').has(index))? state.get('bars').get(index): 0;\n          let newValue = 0;\n\n          if (percentage + base >= 0) {\n            newValue = percentage + base;\n          }\n          return state.set('bars', state.get('bars').setIn([index], newValue));\n        } // if for some reason, the user did not pass the correct parameters or a negative fall through to default.\n      }\n      return state;\n\n    default:\n      return state;\n  }\n}\n",
+    "static": true,
+    "longname": "src/reducers/buttonBars/buttonBarsReducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 45,
+    "kind": "variable",
+    "name": "initialState",
+    "memberof": "src/reducers/buttonBars/buttonBarsReducer.js",
+    "static": true,
+    "longname": "src/reducers/buttonBars/buttonBarsReducer.js~initialState",
+    "access": null,
+    "export": false,
+    "importPath": "react-progress-bar/src/reducers/buttonBars/buttonBarsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "typedef",
+    "name": "action",
+    "memberof": "src/reducers/buttonBars/buttonBarsReducer.js",
+    "static": true,
+    "longname": "src/reducers/buttonBars/buttonBarsReducer.js~action",
+    "access": null,
+    "description": "",
+    "properties": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "action.type",
+        "description": "the action type."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "target.value",
+        "description": "the value."
+      }
+    ],
+    "type": {
+      "types": [
+        "Object"
+      ],
+      "optional": false,
+      "name": "action"
+    }
+  },
+  {
+    "__docId__": 47,
+    "kind": "function",
+    "name": "buttonBarsReducer",
+    "memberof": "src/reducers/buttonBars/buttonBarsReducer.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/reducers/buttonBars/buttonBarsReducer.js~buttonBarsReducer",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/reducers/buttonBars/buttonBarsReducer.js",
+    "importStyle": "buttonBarsReducer",
+    "description": "button and bars Reducer",
+    "lineNumber": 19,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{any}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "state",
+        "description": "the state of this reducer"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "action"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "action",
+        "description": "the action."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "any"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/reducers/index.js",
+    "content": "import { combineReducers } from 'redux';\nimport buttonBarsReducer from './buttonBars/buttonBarsReducer';\n\nexport default combineReducers({\n  buttonBarsReducer\n});\n",
+    "static": true,
+    "longname": "src/reducers/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "file",
+    "name": "src/sagas/index.js",
+    "content": "import { fork } from 'redux-saga/effects';\nimport { fetchButtonBarsWatcher } from './watchers/buttonsWatcher';\n\n/** ******************************* **/\n/** Root Exported Saga, that is run **/\n/** ******************************* **/\n\nexport default function* rootSaga() {\n  yield [\n    fork(fetchButtonBarsWatcher)\n  ];\n}\n",
+    "static": true,
+    "longname": "src/sagas/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "rootSaga",
+    "memberof": "src/sagas/index.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/sagas/index.js~rootSaga",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/sagas/index.js",
+    "importStyle": "rootSaga",
+    "description": "****************************** *",
+    "lineNumber": 8,
+    "params": []
+  },
+  {
+    "__docId__": 51,
+    "kind": "file",
+    "name": "src/sagas/watchers/buttonsWatcher.js",
+    "content": "import { takeLatest } from 'redux-saga/effects';\nimport ACTIONS from '../../actionCreators/actionTypes/index';\nimport fetchButtonBarsWorker from '../workers/buttonsWorker';\n\n/** *********************************************** **/\n/** Designed to regulate the frequency of the calls **/\n/** *********************************************** **/\n\n/**\n * Watch for Dispatch ACTIONS.MAKE.INITIATE so the saga can be kicked off.\n * The user has requested all the makes\n *\n * takeLatest ask almost like a de-bounce.\n */\nexport function* fetchButtonBarsWatcher() {\n  // takeLatest does not allow concurrent fetches\n  yield takeLatest(ACTIONS.BUTTON_BARS.FETCH, fetchButtonBarsWorker);\n}\n",
+    "static": true,
+    "longname": "src/sagas/watchers/buttonsWatcher.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 52,
+    "kind": "function",
+    "name": "fetchButtonBarsWatcher",
+    "memberof": "src/sagas/watchers/buttonsWatcher.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/sagas/watchers/buttonsWatcher.js~fetchButtonBarsWatcher",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/sagas/watchers/buttonsWatcher.js",
+    "importStyle": "{fetchButtonBarsWatcher}",
+    "description": "Watch for Dispatch ACTIONS.MAKE.INITIATE so the saga can be kicked off.\nThe user has requested all the makes\n\ntakeLatest ask almost like a de-bounce.",
+    "lineNumber": 15,
+    "params": []
+  },
+  {
+    "__docId__": 53,
+    "kind": "file",
+    "name": "src/sagas/workers/buttonsWorker.js",
+    "content": "import { call, put } from 'redux-saga/effects';\nimport { saveData } from '../../actionCreators/buttonBarsActions';\nimport * as api from '../../services/buttons/api';\n// import {saveMessage, setError, setInFlight} from \"../../actionCreators/messageActions\";\n\n/** **************** **/\n/** Actual API calls **/\n/** **************** **/\n\nexport default function* fetchButtonBarsWorker() {\n  try {\n    // yield put(saveMessage('loading'));\n    // yield put(setError(false));\n    // yield put(setInFlight(true));\n    const payload = yield call(api.fetchButtonBars);\n\n    yield put(saveData(payload));\n    // yield put(saveMessage(null));\n  } catch (e) {\n    // yield put(setError(true));\n    // yield put(saveMessage(e.message));\n  } finally {\n    // yield put(setInFlight(false));\n  }\n}\n",
+    "static": true,
+    "longname": "src/sagas/workers/buttonsWorker.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "fetchButtonBarsWorker",
+    "memberof": "src/sagas/workers/buttonsWorker.js",
+    "generator": true,
+    "async": false,
+    "static": true,
+    "longname": "src/sagas/workers/buttonsWorker.js~fetchButtonBarsWorker",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/sagas/workers/buttonsWorker.js",
+    "importStyle": "fetchButtonBarsWorker",
+    "description": "*************** *",
+    "lineNumber": 10,
+    "params": []
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "src/services/buttons/api.js",
+    "content": "const API_ROOT = `${process.env.API_URL || '/api/v1'}`;\n\n/**\n * call Api is an abstraction of the Fetch API. It is designed to handle all the errors consistently as well as the data.\n * Two notes about the fetch API, it is a polyfill injected via WebPack, and it does not have a time-out feature. It\n * is possible to make it timeout, but this code does not have that.\n *\n * @param {string} endpoint - the URI endpoint assumed to be at the end of the API_URL.\n * @param {*} params - parameters passed to the Fetch API.\n *\n * @returns {*|Promise.<TResult>}\n */\nfunction callApi(endpoint, params) {\n  const fullUrl = (endpoint.indexOf(API_ROOT) === -1) ? API_ROOT + endpoint : endpoint;\n\n  return fetch(fullUrl, params)\n    .then((response) => {\n      if (response.ok) { // a boolean stating whether the response was successful (status in the range 200-299) or not.\n        return response.json();\n      }\n      let message = 'Server Error';\n\n      try {\n        message = response.statusText;\n      } catch (e) {\n        /* eslint-disable no-console */\n        console.log(e);\n        /* eslint-enable no-console */\n      }\n      let status = 500;\n\n      try {\n        status = response.status;\n      } catch (e) {\n        /* eslint-disable no-console */\n        console.log(e);\n        /* eslint-enable no-console */\n      }\n      let e = new Error(message);\n\n      e.status = status;\n      throw e;\n    });\n}\n\n/**\n * Fetch All the buttons and bars from the server. No parameters and no Paging.\n *\n * @function\n */\nexport const fetchButtonBars = () => callApi('/buttons/', {\n  method: 'GET',\n  headers: {\n    Accept: 'application/json',\n    'Content-Type': 'application/json'\n  }\n});\n",
+    "static": true,
+    "longname": "src/services/buttons/api.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "variable",
+    "name": "API_ROOT",
+    "memberof": "src/services/buttons/api.js",
+    "static": true,
+    "longname": "src/services/buttons/api.js~API_ROOT",
+    "access": null,
+    "export": false,
+    "importPath": "react-progress-bar/src/services/buttons/api.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "callApi",
+    "memberof": "src/services/buttons/api.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/services/buttons/api.js~callApi",
+    "access": null,
+    "export": false,
+    "importPath": "react-progress-bar/src/services/buttons/api.js",
+    "importStyle": null,
+    "description": "call Api is an abstraction of the Fetch API. It is designed to handle all the errors consistently as well as the data.\nTwo notes about the fetch API, it is a polyfill injected via WebPack, and it does not have a time-out feature. It\nis possible to make it timeout, but this code does not have that.",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{*|Promise.<TResult>}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "endpoint",
+        "description": "the URI endpoint assumed to be at the end of the API_URL."
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": "parameters passed to the Fetch API."
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "*",
+        "Promise.<TResult>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "fetchButtonBars",
+    "memberof": "src/services/buttons/api.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/services/buttons/api.js~fetchButtonBars",
+    "access": null,
+    "export": true,
+    "importPath": "react-progress-bar/src/services/buttons/api.js",
+    "importStyle": "{fetchButtonBars}",
+    "description": "Fetch All the buttons and bars from the server. No parameters and no Paging.",
+    "lineNumber": 51,
+    "unknown": [
+      {
+        "tagName": "@function",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 59,
+    "kind": "file",
+    "name": "src/stores/index.js",
+    "content": "import { applyMiddleware, createStore } from 'redux';\nimport { composeWithDevTools } from 'redux-devtools-extension';\nimport reduxLogger from 'redux-logger';\nimport createSagaMiddleware from 'redux-saga';\nimport reducers from '../reducers/index';\nimport rootSaga from '../sagas/index';\n\n/**\n * Saga Middleware\n * @private\n * @const\n * @type {SagaMiddleware<C>}\n */\nconst sagaMiddleware = createSagaMiddleware();\n/**\n * middle wares array\n * @private\n * @const\n */\nconst middleware = [sagaMiddleware];\n\n/**\n * if the NODE_ENV is anything other than production, then install the redux logger.\n */\nif ((process.env.NODE_ENV ? process.env.NODE_ENV : '').toLowerCase() !== 'production') {\n  middleware.push(reduxLogger);\n}\n\n/**\n * Create the store, and load all the reducers and middleware.\n * @private\n * @const\n */\nconst store = createStore(\n  reducers,\n  composeWithDevTools(applyMiddleware(...middleware))\n);\n\n/**\n * Start the Root Saga, which holds all the sagas.\n */\nsagaMiddleware.run(rootSaga);\n\n/**\n * A Redux store that lets you read the state, dispatch actions and subscribe to changes.\n *\n * @public\n */\nexport default store;\n",
+    "static": true,
+    "longname": "src/stores/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 60,
+    "kind": "variable",
+    "name": "sagaMiddleware",
+    "memberof": "src/stores/index.js",
+    "static": true,
+    "longname": "src/stores/index.js~sagaMiddleware",
+    "access": "private",
+    "export": false,
+    "importPath": "react-progress-bar/src/stores/index.js",
+    "importStyle": null,
+    "description": "Saga Middleware",
+    "lineNumber": 14,
+    "unknown": [
+      {
+        "tagName": "@const",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "nullable": null,
+      "types": [
+        "SagaMiddleware<C>"
+      ],
+      "spread": false,
+      "description": null
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "variable",
+    "name": "middleware",
+    "memberof": "src/stores/index.js",
+    "static": true,
+    "longname": "src/stores/index.js~middleware",
+    "access": "private",
+    "export": false,
+    "importPath": "react-progress-bar/src/stores/index.js",
+    "importStyle": null,
+    "description": "middle wares array",
+    "lineNumber": 20,
+    "unknown": [
+      {
+        "tagName": "@const",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "undefined[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "variable",
+    "name": "store",
+    "memberof": "src/stores/index.js",
+    "static": true,
+    "longname": "src/stores/index.js~store",
+    "access": "public",
+    "export": true,
+    "importPath": "react-progress-bar/src/stores/index.js",
+    "importStyle": "store",
+    "description": "A Redux store that lets you read the state, dispatch actions and subscribe to changes.",
+    "lineNumber": 34,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 65,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 68,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 69,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 70,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 71,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 73,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 74,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 75,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 76,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 77,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 78,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 79,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 80,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 81,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 82,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 83,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 84,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 85,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 86,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 87,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 88,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 89,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 90,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 91,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 92,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 93,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 94,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 95,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 96,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 97,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 98,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 99,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 100,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 101,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 102,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 103,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 104,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 105,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 106,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 107,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 108,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 109,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 110,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "lineNumber": 193,
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 112,
+    "kind": "external",
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 113,
+    "kind": "external",
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 114,
+    "kind": "external",
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 115,
+    "kind": "external",
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 116,
+    "kind": "external",
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 117,
+    "kind": "external",
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 118,
+    "kind": "external",
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 119,
+    "kind": "external",
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "static": true,
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "lineNumber": 34,
+    "builtinExternal": true
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "coverage": "66.66%",
+  "expectCount": 30,
+  "actualCount": 20,
+  "files": {
+    "src/containers/App.js": {
+      "expectCount": 8,
+      "actualCount": 1,
+      "undocumentLines": [
+        33,
+        21,
+        23,
+        37,
+        41,
+        45,
+        26
+      ]
+    },
+    "src/components/button/Button.js": {
+      "expectCount": 5,
+      "actualCount": 4,
+      "undocumentLines": [
+        19
+      ]
+    },
+    "src/components/option/Option.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/components/progressBar/ProgressBar.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/components/section/Section.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/components/select/Select.js": {
+      "expectCount": 5,
+      "actualCount": 3,
+      "undocumentLines": [
+        26,
+        38
+      ]
+    },
+    "src/reducers/buttonBars/buttonBarsReducer.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/services/buttons/api.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/sagas/watchers/buttonsWatcher.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/sagas/workers/buttonsWorker.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/actionCreators/buttonBarsActions.js": {
+      "expectCount": 3,
+      "actualCount": 3,
+      "undocumentLines": []
+    },
+    "src/sagas/index.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/stores/index.js": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    }
+  }
+}
