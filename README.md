@@ -6,7 +6,7 @@ Written by Philip A Senger
 
 [philip.a.senger@cngrgroup.com](mailto:philip.a.senger@cngrgroup.com) | mobile: 0404466846 | [CV/Resume](http://www.visualcv.com/philipsenger) | [blog](http://www.apachecommonstipsandtricks.blogspot.com/) | [LinkedIn](http://au.linkedin.com/in/philipsenger) | [twitter](http://twitter.com/PSengerDownUndr) | [keybase](https://keybase.io/psenger)
 
-Website in action is located [here](http://simple-car-example.s3-website-ap-southeast-2.amazonaws.com/)
+Website in action is located [here](http://react-progress-bar.s3-website-ap-southeast-2.amazonaws.com/)
 
 ## TOC
 
@@ -23,7 +23,7 @@ Website in action is located [here](http://simple-car-example.s3-website-ap-sout
 | Mandate  | Name      | Purpose | ex |
 |:---------|:----------|:--------|:---|
 | required | API_URL   | The base Url to the hosted api server. If not set, it assumes localhost | [prod](https://simple-example-cars.herokuapp.com/api/v1/)  |
-| required | PUBLIC_URL| The Url to the public html server. Values will be embedded into the processed HTML. | [prod](http://simple-car-example.s3-website-ap-southeast-2.amazonaws.com/) |
+| required | PUBLIC_URL| The Url to the public html server. Values will be embedded into the processed HTML. | [prod](http://react-progress-bar.s3-website-ap-southeast-2.amazonaws.com/) |
 | required | NODE_ENV  | When you deploy, you should set this to 'production'. This will turn off the Redux Logger. | `export NODE_ENV=production`  |
 
 
@@ -69,20 +69,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Requirements
 
-  :bug: Must read data from the endpoint.
-  :bug: Multiple bars.
-  :bug: One set of controls that can control each bar on the fly.
-  :bug: Can't go under 0.
-  :bug: Can go over 100%, but limit the bar itself and change its colour.
-  :bug: Display usage amount as a percentage, centered on each bar.
-  :bug: Write tests for your code (hint: TDD strongly preferred).
-  :bug: Implement a responsive solution: testing it on mobile, tablet, etc. Getting it working nicely.
-  :bug: Animate the bar change, make sure it works well when you tap buttons quickly.
-  :bug: Version control.
-  :bug: Setting it up as a project.
-  :bug: Setting up some automated tools.
-  :bug: Linting, code quality, etc.
-  :bug: Comment code.
+* Must read data from the endpoint.
+* Multiple bars.
+* One set of controls that can control each bar on the fly.
+* Can't go under 0.
+* Can go over 100%, but limit the bar itself and change its colour.
+* Display usage amount as a percentage, centered on each bar.
+* Write tests for your code (hint: TDD strongly preferred).
+* Implement a responsive solution: testing it on mobile, tablet, etc. Getting it working nicely.
+* Animate the bar change, make sure it works well when you tap buttons quickly.
+* Version control.
+* Setting it up as a project.
+* Setting up some automated tools.
+* Linting, code quality, etc.
+* Comment code.
   
 ## Developer Notes
 
