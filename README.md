@@ -71,6 +71,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Jest
 * Fetch ( polyfilled )
 * WCAG 2.0 AA
+* Version controlled / tagged with Github
+* automated Travis CI
+* automated code coverage report
 
 ## Requirements
 
@@ -95,7 +98,8 @@ Im pretty happy with these results. If I could get time to do a few more things:
 
 * spend more time on the tests, they are not up to my standards.    
 * I would use a third party for the widgets or create my own component library to reuse these.
-* get the App.js spec test running, its just to hard to figure out how to wire the whole thing together.
+* I dont like how slow the app is in IE, I would maybe look into SSR.
+* I would get the App.js spec test running, its just to hard to figure out how to wire the whole thing together.
 * I would add night watch to dial up Browser Stack to run end to end tests on all the browsers.
 * spend more time on the docs.
 
