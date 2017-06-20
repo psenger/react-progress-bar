@@ -60,6 +60,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Redux
 * Redux-Saga
 * Immutable
+* WebPack
 * Jest
 * Fetch ( polyfilled )
 * WCAG 2.0 AA
