@@ -7,16 +7,20 @@ Written by Philip A Senger
 
 [philip.a.senger@cngrgroup.com](mailto:philip.a.senger@cngrgroup.com) | mobile: 0404466846 | [CV/Resume](http://www.visualcv.com/philipsenger) | [blog](http://www.apachecommonstipsandtricks.blogspot.com/) | [LinkedIn](http://au.linkedin.com/in/philipsenger) | [twitter](http://twitter.com/PSengerDownUndr) | [keybase](https://keybase.io/psenger)
 
-Website in action is located [here](http://react-progress-bar.s3-website-ap-southeast-2.amazonaws.com/)
-
 ## TOC
 
+* [Active Websites](#active-websites)
 * [Environment Variables](#environment-variables)
 * [Available Scripts for Command Line](#available-scripts-for-command-line)
 * [Technologies used](#technologies-used) 
 * [Requirements](#requirements)
 * [Developer Notes](#developer-notes)
 * [Known Issues](#known-issues)
+
+## Active Websites
+
+* [Click here to see a live website in action](http://react-progress-bar.s3-website-ap-southeast-2.amazonaws.com/)
+* [Click here to see the JavaScript Documentation](https://psenger.github.io/react-progress-bar/)
 
 
 ## Environment Variables
