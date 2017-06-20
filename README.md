@@ -71,7 +71,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Redux-Saga
 * Immutable
 * WebPack
-* Fetch
 * esdoc
 * eslint
 * babel
