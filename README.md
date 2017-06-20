@@ -31,6 +31,9 @@ Written by Philip A Senger
 | required | PUBLIC_URL| The Url to the public html server. Values will be embedded into the processed HTML. | [prod](http://react-progress-bar.s3-website-ap-southeast-2.amazonaws.com/) |
 | required | NODE_ENV  | When you deploy, you should set this to 'production'. This will turn off the Redux Logger. | `export NODE_ENV=production`  |
 
+*NOTE:*
+
+A local server ( for development and testing ) is used if none of these values are set. The server configuration is configured in the file ``config/webpackDevServer.config.js``
 
 ## Available Scripts for Command Line
 
