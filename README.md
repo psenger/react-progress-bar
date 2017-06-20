@@ -62,6 +62,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Immutable
 * Jest
 * Fetch ( polyfilled )
+* WCAG 2.0 AA
 
 ## Requirements
 
