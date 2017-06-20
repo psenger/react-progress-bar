@@ -1,0 +1,34 @@
+/** Adopted from BEM http://getbem.com/ **/
+
+.progressbar--border {
+    border: 1px solid #000;
+    height: 24px;
+    margin: 10px;
+}
+
+.progressbar--slide {
+    height: 24px;
+    transition: all 0.5s ease;
+}
+
+.progressbar--label {
+    color: #000;
+    font-size: 12px;
+    position: relative;
+    bottom: 0;
+    top: -24px;
+    z-index: 1;
+    line-height: 24px;
+    display: block;
+    text-align: center;
+}
+
+.progressbar--slide--valid {
+    background-color: #afd8e5;
+}
+
+.progressbar--slide--invalid {
+    background-color: red;
+}
+
+
