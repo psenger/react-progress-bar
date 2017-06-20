@@ -1,6 +1,7 @@
 # React Progress Bar
 
 [![Build Status](https://travis-ci.org/psenger/react-progress-bar.svg?branch=master)](https://travis-ci.org/psenger/react-progress-bar)
+[![Coverage Status](https://coveralls.io/repos/github/psenger/react-progress-bar/badge.svg?branch=master)](https://coveralls.io/github/psenger/react-progress-bar?branch=master)
 
 Written by Philip A Senger
 
