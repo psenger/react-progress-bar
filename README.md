@@ -96,11 +96,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Im pretty happy with these results. If I could get time to do a few more things:
 
-* spend more time on the tests, they are not up to my standards.    
+* spend more time on the tests, they are not up to my standards. 
+* we need a loading mask. when the api server is coming up or slow to respond the screen looks bad.
 * I would use a third party for the widgets or create my own component library to reuse these.
 * I dont like how slow the app is in IE, I would maybe look into SSR.
 * I would get the App.js spec test running, its just to hard to figure out how to wire the whole thing together.
 * I would add night watch to dial up Browser Stack to run end to end tests on all the browsers.
 * spend more time on the docs.
 
+# Known Issues
 
+1. When the API comes up or is in the middle of of sending data, the page looks odd. Parts of it are missing.
