@@ -71,10 +71,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Redux-Saga
 * Immutable
 * WebPack
+* Fetch
+* esdoc
+* eslint
+* babel
 * Jest
+* enzyme
 * Fetch ( polyfilled )
 * WCAG 2.0 AA
 * Version controlled / tagged with Github
+* Issues tracked with Github
 * automated Travis CI
 * automated code coverage report
 
