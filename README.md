@@ -21,7 +21,7 @@ Written by Philip A Senger
 
 * [Click here to see a live website in action](http://react-progress-bar.s3-website-ap-southeast-2.amazonaws.com/)
 * [Click here to see the JavaScript Documentation](https://psenger.github.io/react-progress-bar/)
-
+* [Evidence of testing with BrowserStack](https://youtu.be/olnYyrwJpvg)
 
 ## Environment Variables
 
@@ -93,6 +93,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Im pretty happy with these results. If I could get time to do a few more things:
 
+* spend more time on the tests, they are not up to my standards.    
 * I would use a third party for the widgets or create my own component library to reuse these.
 * get the App.js spec test running, its just to hard to figure out how to wire the whole thing together.
 * I would add night watch to dial up Browser Stack to run end to end tests on all the browsers.
